@@ -2,7 +2,7 @@
   "name": "example-ui",
   "version": "0.1.0",
   "description": "An example UI component library using Storybook",
-  "main": "index.js",
+  "main": "dist/main.js",
   "repository": "git@github.com:reubenberghan/example-ui.git",
   "author": "Reuben Berghan <reuben.berghan@gmail.com>",
   "license": "MIT",
@@ -15,7 +15,9 @@
     "import-sort-style-airkro": "^0.1.6",
     "lint-staged": "^8.1.0",
     "react-testing-library": "^5.4.4",
-    "standard": "^12.0.1"
+    "standard": "^12.0.1",
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1"
   },
   "dependencies": {
     "ramda": "^0.26.1",
@@ -26,8 +28,9 @@
     "styled-map": "^3.2.0-rc.1"
   },
   "scripts": {
-    "storybook": "start-storybook -p 9001 -c .storybook",
-    "format": "standard 'src/**/*.js' --fix"
+    "build": "webpack",
+    "format": "standard 'src/**/*.js' --fix",
+    "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "importSort": {
     ".js": {

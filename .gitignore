@@ -62,3 +62,6 @@ typings/
 
 # local history
 .history/
+
+# build
+dist/
